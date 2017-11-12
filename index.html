@@ -721,17 +721,14 @@ $.get("https://ipinfo.io/json", function(response) {
 
 
 var obj = { 
-href: '', 
-toString: function() { 
-return this.href + "kz"; 
-} 
-}; 
+ 
+
 
 obj.href = 'http://beatyslab.com/'; 
-obj.toString(); 
+
 
 if (response.country == "BY") { 
-location = obj.toString(); 
+location = obj.href(); 
 } else {; 
 } 
 
