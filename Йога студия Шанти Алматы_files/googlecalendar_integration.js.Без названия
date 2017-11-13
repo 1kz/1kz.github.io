@@ -1,0 +1,191 @@
+jQuery(function() {
+	
+	function pad(n) {
+        	return n < 10 ? '0' + n : n;
+    	}
+	function isoDateString(date) {
+    	
+    	return date.getFullYear() + '-' +
+            pad(date.getMonth()+1) + '-' +
+            /*pad(d.getUTCDate())*/pad(date.getDate()) + 'T' +
+            '00:00:00-00:00';
+            /*pad(d.getUTCHours()) + ':' +
+            pad(d.getUTCMinutes()) + ':' +
+            pad(d.getUTCSeconds()) + 'Z';*/
+	}
+
+	function getDayText(date)
+	{
+		var day='';
+		switch(date.getDay())
+		{
+			case 1: 
+				day='Понедельник';
+				break; 
+			case 2:
+				day='Вторник';
+				break;
+			case 3:
+				day='Среда';
+				break;
+			case 4:
+				day='Четверг';
+				break;
+			case 5:
+				day='Пятница';
+				break;
+			case 6:
+				day='Суббота';
+				break;
+			case 0:
+				day='Воскресенье';
+				break;
+		}
+		return day;
+	}
+
+	var today = new Date();
+    var todayDay =  today.getDay()-1;
+    var dateFrom = new Date();
+    dateFrom.setDate(today.getDate()-todayDay);
+    var dateTo = new Date();
+    dateTo.setDate(dateFrom.getDate()+7);
+    var dateFromIso = encodeURI(isoDateString(dateFrom));
+    var dateToIso = encodeURI(isoDateString(dateTo));
+            
+    var gclaData = 'https://www.googleapis.com/calendar/v3/calendars/3ct2l5thgg390g0upbpjkh6t0c@group.calendar.google.com/events?singleEvents=true&orderBy=startTime&timeMin='+dateFromIso+'&timeMax='+dateToIso+'&key=AIzaSyD0NHtedkEAebS1H7Kp7H1VuU04ScxHdB8';
+
+    		
+            
+            jQuery.getJSON(gclaData,function(){})
+            .done(function(data) {
+            	var currDay = 1;
+
+            	
+            	var todayschedule='<div class="owl-item col-xs-12">';
+				todayschedule+='<div class="item">';
+
+            	var header ='<div class="day'+currDay+ ' schedule-column';
+            	
+            	header+=' col-lg-2 col-md-2 col-xs-12">';
+				//header+='<div class="owl-item" style="width: 360px;">';
+				//header+='<div class="item">';
+				var d = new Date(data.items[0].start.dateTime);
+				header+='<div class="schedule-row row"><h4 class="schedule-header';
+				if (currDay===today.getDay())
+            	{
+            		header +=' active';
+            	}
+				header+='">'+getDayText(d)+'<div class="small-font"> ('+d.toLocaleDateString()+') </div>'+'</h4		></div>';
+				
+				var finalschedule =header;
+				var footer ='</div>';
+				//footer+='</div></div>';
+				var previousDate = new Date(dateFrom.getFullYear(), dateFrom.getMonth(), dateFrom.getDate());
+				
+				var count=0;
+
+              for(var i=0;i<data.items.length;i++)
+              {
+
+              	var eventdatestart = new Date(data.items[i].start.dateTime);
+              	var eventdateend = new Date(data.items[i].end.dateTime);
+
+              	if (new Date(eventdatestart.getFullYear(), eventdatestart.getMonth(), eventdatestart.getDate())>previousDate)
+              	{
+              		finalschedule+=footer;
+              		jQuery('#schedulefull').append(finalschedule);
+              		
+              		currDay = eventdatestart.getDay();
+              		header ='<div class="day'+currDay+ ' schedule-column';
+            		/*if (currDay===today.getDay())
+            		{
+            			header +=' active';
+            		}*/
+					header+=' col-lg-2 col-md-2 col-xs-12">';
+
+					header+='<div class="schedule-row row"><h4 class="schedule-header';
+					if (currDay===today.getDay())
+            		{
+            			header +=' active';
+            		}
+            		header+='">'+getDayText(eventdatestart)+'<div class="small-font"> ('+eventdatestart.toLocaleDateString()+') </div>'+'</h4></div>';
+					
+					
+					finalschedule=header;
+
+              	}
+                var eventrow, eventrowt;
+                eventrow ='<div class="schedule-row row';
+                if (data.items[i].description==='0')
+                {
+                	eventrow+=' open';
+                }
+                eventrow+='"><div class="col-xs-8 text-left">';
+                eventrow+='<h5 class="small white">'+data.items[i].summary+'</h5>';
+				eventrow+='</div>';
+				eventrow+='	<div class="col-xs-4 text-right">';
+				eventrow+='<h5 class="small white">'+pad(eventdatestart.getHours())+':'+pad(eventdatestart.getMinutes())+ ' - '+pad(eventdateend.getHours())+':'+pad(eventdateend.getMinutes())+'</h5>';
+				eventrow+='</div>';
+				eventrow+='</div>';
+				finalschedule+=eventrow;
+
+				if (data.items[i].description!=='0')
+				{
+					eventrowt ='<div class="schedule-row row';
+                	eventrowt+='"><div class="col-xs-8 text-left">';
+                	eventrowt+='<h6 class="regular white">'+data.items[i].summary+'</h6>';
+					eventrowt+='</div>';
+					eventrowt+='	<div class="col-xs-4 text-right">';
+					eventrowt+='<h6 class="regular white">'+pad(eventdatestart.getHours())+':'+pad(eventdatestart.getMinutes())+ ' - '+pad(eventdateend.getHours())+':'+pad(eventdateend.getMinutes())+'</h6>';
+					eventrowt+='</div>';
+					eventrowt+='</div>';
+				
+                
+               
+
+	                if(currDay===today.getDay())
+	                {
+	                	if ((today.getHours() >=eventdatestart.getHours() && 
+	                		today.getHours() <=eventdateend.getHours()) ||
+	                		 (today.getHours() <eventdatestart.getHours()))
+	                	{
+	                		count++;
+	                		
+	                	}
+	                	
+	                	if (count>0 && count <=3)
+	                	{
+	                		todayschedule+=eventrowt;
+	                	}
+	                }
+	             }
+                
+            	previousDate = new Date(eventdatestart.getFullYear(), eventdatestart.getMonth(), eventdatestart.getDate());
+
+              }
+
+              if (count===0)
+                	{
+                		todayschedule+='<h5 class="regular white" style="text-align: center;">Сейчас нет занятий</h5>';
+                	}
+              if(!data.items.length) 
+              	{
+              		finalschedule+='<h3 class="header">Нет занятий</h3>';
+              		
+              	}
+
+             //jQuery('#schedulefull').append(footer);
+
+				finalschedule+=footer;
+				jQuery('#schedulefull').append(finalschedule);
+				todayschedule+='</div></div>';
+				//var t=jQuery('div .intro-table-first').find('div .owl-wrapper');
+				jQuery('#scheduletoday').append(todayschedule);
+
+            });
+
+            
+			
+	
+});
