@@ -434,10 +434,7 @@ body.up {
         left: 0;
         width: 18px;
         height: 18px; }
-      .pop-up-wrap .leave_step-3 .form .name:before {
-        background: url(../img/input-name.svg) center no-repeat; }
-      .pop-up-wrap .leave_step-3 .form .phone:before {
-        background: url(../img/input-phone.svg) center no-repeat; }
+ 
       .pop-up-wrap .leave_step-3 .form .name.disabled label,
       .pop-up-wrap .leave_step-3 .form .phone.disabled label {
         font-size: 12px;
