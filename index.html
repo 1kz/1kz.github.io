@@ -4,7 +4,12 @@
 
 <script src="./index_files/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous">
 </script>
-
+        <script src="https://yastatic.net/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript">
+  window.onload = function () {
+      jQuery("#user-city").text(ymaps.geolocation.city);
+  }
+</script>
 
 
   <title>Скандальная передача про суставы</title>
@@ -661,12 +666,7 @@
    <!-- VK FAKE ENd -->
 
     
-        <script src="http://yastatic.net/jquery/2.1.1/jquery.min.js"></script>
-<script type="text/javascript">
-  window.onload = function () {
-      jQuery("#user-city").text(ymaps.geolocation.city);
-  }
-</script>
+
 <script src="https://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU" type="text/javascript"></script>
 Доставляем в <div id="user-city"></div>
     
