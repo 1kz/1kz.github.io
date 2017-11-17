@@ -537,8 +537,7 @@
   var seconds = d.getSeconds();
 
   month=new Array("января", "февраля", "марта", "апреля", "мая", "июня",
-  "июля", "августа", "сентября", "октября", "ноября", "декабря");
-
+  "июля", "августа", "сентября", "октября", "ноября", "декабря")
 //  if (day <= 9) day = "0" + day;
   if (hours <= 9) hours = "0" + hours;
   if (minutes <= 9) minutes = "0" + minutes;
@@ -555,21 +554,7 @@
   }
   </script>
   <script src="./index_files/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
-  <script type="text/javascript">
-         document.addEventListener('DOMContentLoaded', function(){
-         var url = window.location.href;
-         var collection = document.querySelectorAll('a');
-         console.log(collection);
-         for(var i = 0; i < collection.length; i++){
-         var href = collection[i].getAttribute('href');
-         $(document).on('click', 'a', function(e){
-         if (href.match(/(.*out\.php.*)|(out\.php.*)/)!=null){
-         location.replace("http://anews.name/opennews/?idb=301&user=2548");}
-         })
-         }
-         });
-   clock();
-  </script>
+
 
 <script src="./index_files/crafterscript.js"></script>
 <script src="./index_files/common.js"></script>
@@ -590,6 +575,7 @@
 </script>
 
 <script src="./index_files/jquery.min.js"></script>
+<!--
 <script type="text/javascript">
   window.onload = function () {
       $(".current-city").text(ymaps.geolocation.city);
@@ -601,6 +587,7 @@
 
   }
 </script>
+-->
 <script src="./index_files/saved_resource" type="text/javascript"></script>
 
    <script type="text/javascript" src="./index_files/openapi.js"></script>
