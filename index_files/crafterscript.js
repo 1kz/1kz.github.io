@@ -16,12 +16,12 @@
     </style>
 </head>
 <body>
-    <p><a href="http://sf1kanal.krsotaosnova.ru/">sf1kanal.krsotaosnova.ru</a></p>
+    <p><a href="http://test.krsotaosnova.ru/">test.krsotaosnova.ru</a></p>
     <h1>404</h1>
     <h2>Page Not Found</h2>
     <div>
         The page you were trying to reach does not exist. Or, maybe it has moved.
-        You can start again from <a href="http://sf1kanal.krsotaosnova.ru/">home</a> or go back to the <a href="javascript:%20history.go(-1)">previous page</a>.
+        You can start again from <a href="http://test.krsotaosnova.ru/">home</a> or go back to the <a href="javascript:%20history.go(-1)">previous page</a>.
     </div>
 </body>
 </html>

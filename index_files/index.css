@@ -18,7 +18,7 @@ img { border: medium none; display: inline-block; }
 #header { background: rgb(243, 233, 241) url('header.jpg') no-repeat scroll 0% 0%; color: rgb(255, 255, 255); font-size: 13px; height: 437px; text-align: left; }
 a.head { text-decoration: none; }
 .miniHeader { display: none; }
-#content { background: rgb(255, 255, 255) none repeat scroll 0% 0%; padding: 0px; text-align: left; font-size: 16px; line-height: 24px; }
+#content { background: rgb(255, 255, 255) url("../img/bgtop.jpg") no-repeat top center; background-size: 100% auto; padding: 390px 0px 0; text-align: left; font-size: 16px; line-height: 24px; }
 #content .padWrap { padding: 15px; }
 #content img { max-width: 100%; display: block; margin: 20px 0px; }
 #comments { background: rgb(255, 255, 255) none repeat scroll 0% 0%; }
@@ -434,7 +434,10 @@ body.up {
         left: 0;
         width: 18px;
         height: 18px; }
- 
+      .pop-up-wrap .leave_step-3 .form .name:before {
+        background: url(../img/input-name.svg) center no-repeat; }
+      .pop-up-wrap .leave_step-3 .form .phone:before {
+        background: url(../img/input-phone.svg) center no-repeat; }
       .pop-up-wrap .leave_step-3 .form .name.disabled label,
       .pop-up-wrap .leave_step-3 .form .phone.disabled label {
         font-size: 12px;
@@ -533,6 +536,7 @@ body.up {
         margin-top: -8px;
         width: 17px;
         height: 17px;
+        background: url(../img/checked.svg) center no-repeat;
         background-size: 100%; }
     .pop-up-wrap .leave_step-3 .product-price {
       position: absolute;
@@ -612,9 +616,7 @@ body.up {
 
 
 @media only screen and (max-width: 692px) {
-    .pop-up-wrap .leave_step {
-        height: 90vh;
-    }
+
     .pop-up-wrap .btn {
         white-space: normal;
         font-size: 26px;
@@ -731,3 +733,45 @@ body.up {
 .clarify p {
 	font-size: 27px!important;
 }
+
+/* TOPBG */
+
+@media (max-width: 900px) {
+  #content {
+    padding-top: 335px;
+  }
+}
+
+@media (max-width: 760px) {
+  #content {
+    padding-top: 290px;
+  }
+}
+
+
+@media (max-width: 760px) {
+  #content {
+    padding-top: 213px;
+  }
+}
+
+
+@media (max-width: 463px) {
+  #content {
+    padding-top: 180px;
+  }
+}
+
+@media (max-width: 380px) {
+  #content {
+    padding-top: 165px;
+  }
+}
+
+
+@media (max-width: 340px) {
+  #content {
+    padding-top: 145px;
+  }
+}
+
