@@ -75,7 +75,7 @@
           clock();
             </script>
         </span>
-        <span class="header__city current-city"></span>
+        <span id="user-city'></span>
       </div>
       <div class="header__social">
         <ul class="header__social-list">
@@ -579,86 +579,16 @@
     
     
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
-<script src="http://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU" type="text/javascript"></script>
-    
-    <script type="text/javascript">
-    $(document).ready(function() {
-        ymaps.ready(function() {
-            var country = ymaps.geolocation.country;
-            var city = ymaps.geolocation.city;
-            
-            $('#country').html('Выша страна '+country);            
-            $('#city').html('Выша город '+city);
-        });
-    });
-</script>
-    
-    <span id="city"></span>
-    
-    
-    
-<!--
+
+       <script src="http://yastatic.net/jquery/2.1.1/jquery.min.js"></script>
 <script type="text/javascript">
   window.onload = function () {
-      $(".current-city").text(ymaps.geolocation.city);
- /*     jQuery("#user-region").text(ymaps.geolocation.region);
-    jQuery("#user-country").text(ymaps.geolocation.country);*/
-
-    console.log(ymaps.geolocation.city);
-        console.log($(".current-city"))
-
+      jQuery("#user-city").text(ymaps.geolocation.city);
   }
 </script>
-
-
-
-
-
-
--->
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <script src="//api-maps.yandex.ru/2.0/?load=package.standard&lang=ru-RU" type="text/javascript"></script>
-<script type="text/javascript">
-ymaps.ready(init);
-function init() {
-  var geolocation = ymaps.geolocation;
-  if (geolocation) {
-    jQuery(function($){
-      $("input[name='ya-city']").val(geolocation.city);
-      $("input[name='ya-country']").val(geolocation.country);
-    });
-  } else {
-    console.log('Не удалось установить местоположение');
-  }
-}
-</script>
-    
-    
-    
-    <script src="http://yastatic.net/jquery/2.1.1/jquery.min.js"></script>
-<script type="text/javascript">
-  window.onload = function () {
-      jQuery("#user-city").val(ymaps.geolocation.city+', '+ymaps.geolocation.region+', '+ymaps.geolocation.country);
-  }
-</script> 
-<script src="http://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU" type="text/javascript"></script>
-<input type='text' name='city' id='user-city' value='' />
-    
-    
-    
-    
-    
-    
+<script src="https://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU" type="text/javascript"></script>
+Доставляем в <div id="user-city"></div>
+     
     
     
     
