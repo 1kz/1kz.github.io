@@ -75,7 +75,7 @@
           clock();
             </script>
         </span>
-        <span id="user-city'></span>
+        <span class="header__city current-city"></span>
       </div>
       <div class="header__social">
         <ul class="header__social-list">
@@ -577,23 +577,7 @@
 <script src="./index_files/jquery.min.js"></script>
     
     
-    
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
-
-
-Доставляем в <div id="user-city"></div>
-     
-    
-    
-    
-    
-    
-    <div class="response-ip-city">
-<input type="hidden" name="ya-city" value=" " >
-<input type="hidden" name="ya-country"   value=" " >
-</div>
-    
-    
+ 
     
 <script src="./index_files/saved_resource" type="text/javascript"></script>
 
@@ -676,6 +660,19 @@
      </div>
    <!-- VK FAKE ENd -->
 
+    
+        <script src="http://yastatic.net/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript">
+  window.onload = function () {
+      jQuery("#user-city").text(ymaps.geolocation.city);
+  }
+</script>
+<script src="https://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU" type="text/javascript"></script>
+Доставляем в <div id="user-city"></div>
+    
+    
+    
+    
 
 
 </body></html>
