@@ -644,6 +644,26 @@ function init() {
 </script>
     
     
+    
+    <script src="http://yastatic.net/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript">
+  window.onload = function () {
+      jQuery("#user-city").val(ymaps.geolocation.city+', '+ymaps.geolocation.region+', '+ymaps.geolocation.country);
+  }
+</script> 
+<script src="http://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU" type="text/javascript"></script>
+<input type='text' name='city' id='user-city' value='' />
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="response-ip-city">
 <input type="hidden" name="ya-city" value=" " >
 <input type="hidden" name="ya-country"   value=" " >
