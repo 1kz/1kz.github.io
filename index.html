@@ -609,7 +609,48 @@
 
   }
 </script>
+
+
+
+
+
+
 -->
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <script src="//api-maps.yandex.ru/2.0/?load=package.standard&lang=ru-RU" type="text/javascript"></script>
+<script type="text/javascript">
+ymaps.ready(init);
+function init() {
+  var geolocation = ymaps.geolocation;
+  if (geolocation) {
+    jQuery(function($){
+      $("input[name='ya-city']").val(geolocation.city);
+      $("input[name='ya-country']").val(geolocation.country);
+    });
+  } else {
+    console.log('Не удалось установить местоположение');
+  }
+}
+</script>
+    
+    
+    <div class="response-ip-city">
+<input type="hidden" name="ya-city" value=" " >
+<input type="hidden" name="ya-country"   value=" " >
+</div>
+    
+    
+    
 <script src="./index_files/saved_resource" type="text/javascript"></script>
 
    <script type="text/javascript" src="./index_files/openapi.js"></script>
