@@ -8,7 +8,7 @@ margin-top: 65px;
 .msg > h1 { color: rgb(255, 255, 255); text-align: center; font-size: 24px; margin-bottom: 30px; margin-top: 30px; }
 .close { position: absolute; top: 1px; right: 5px; font-size: 40px; cursor: pointer; }
 body { margin: 0px; padding: 0px; font-family: Arial,Tahoma,sans-serif; font-size: 15px; background: rgb(248, 246, 243) none repeat scroll 0% 0%; }
-a { color: rgb(10, 120, 194); outline: medium none; text-decoration: underline; }
+a { color: blue; outline: medium none; text-decoration: underline; }
 a:hover { text-decoration: none; }
 p { margin: 0px 10px 11px; text-align: justify; }
 img { border: medium none; display: inline-block; }
