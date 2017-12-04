@@ -1,0 +1,266 @@
+.header {
+	padding: 15px 10px;
+	background-color: #fff;
+}
+
+
+.header__top {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-between;
+	-ms-align-items: center;
+	align-items: center;
+}
+
+
+.header__social-list {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-ms-align-items: center;
+	align-items: center;
+}
+
+.header__info {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-ms-align-items: center;
+	align-items: center;
+	margin-top: 3px;
+	margin-right: 150px;
+}
+
+.header__date {
+	margin-right: 15px;
+	color: #96a0a8;
+	font-size: 13px;
+	line-height: 13px;
+}
+
+.header__city {
+	display: block;
+	color: #05519d;
+	font-size: 14px;
+}
+
+
+.header__channel {
+	width: 235px;
+	height: 50px;
+}
+
+.header__channel img {
+	width: 100%;
+	height: auto;
+}
+
+.header__social-item {
+	width: 30px;
+	height: 30px;
+	list-style: none;
+	-ms-align-items: center;
+	align-items: center;
+	margin-right: 15px;
+	cursor: pointer;
+	padding: 3px;
+}
+
+.header__social-item:last-of-type {
+	margin-right: 0;
+}
+
+.header__social-item svg {
+	width: 30px;
+	height: 30px;
+}
+
+.header__social-item:hover {			
+	background-color: #5296DB;
+	transition: 0.3s;
+	border-radius: 3px;
+}
+
+.header__social-item:hover .st0 {
+	fill: #fff !important;
+	transition: 0.3s;
+}
+
+.header__bot {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-ms-align-items: center;
+	align-items: center;
+	margin-top: 7px;
+}
+
+.header__nav {
+	margin-left: 30px;
+}
+
+.header__nav-item--active {
+	border-radius: 4px;
+	border: 2px solid  #05519d;
+	opacity: 1;
+}
+
+.header__nav:hover .header__nav-item{
+	color: grey;
+}
+
+.header__nav:hover .header__nav-item--active{
+	opacity: 0.7;
+	transition: 0.3s;
+	border:2px solid grey;
+}
+
+.header__nav:hover .header__nav-item--active:hover {
+	border-radius: 4px;
+	border: 2px solid  #05519d;
+	opacity: 1;
+}
+
+
+.header__nav-item {
+	line-height: 25px;
+	font-size: 14px;
+	text-transform: uppercase;
+	color: #1b354a;
+	font-weight: bold;
+	margin-right: 15px;
+	cursor: pointer;
+	display: inline-block;
+	padding: 0 4px;
+}
+
+.header__nav-item:last-of-type {
+	margin-right: 0;
+}
+
+.header__nav-item:hover {
+	color: #05519d !important;
+}
+
+.header__search {
+	width: 30px;
+	height: 30px;
+	display: block;
+	margin-left: 20px;
+	padding: 4px;
+}
+
+.header__search:hover {
+	background-color: #5296DB;
+	border-radius: 3px;
+	transition: 0.3s;
+	cursor: pointer;
+}
+
+.header__search:hover .st1{
+	fill:#fff;
+	transition: 0.3s;
+}
+
+#day {
+	text-transform: lowercase;
+}
+
+@media (max-width: 962px) {
+	#day {
+		display: none;
+	}
+
+	#time {
+		display: none;
+	}
+
+	.header__channel {
+		max-width: 150px;
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		-ms-align-items: center;
+		align-items: center;
+	}
+
+	.header__info {
+		margin-right: 20px;
+	}
+
+	.header__social-item {
+		width: 20px;
+		height: 20px;
+		margin-right: 5px;
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		-ms-align-items: center;
+		align-items: center;
+		justify-content: center;	
+	}
+
+	.header__social-item svg{
+		width: 15px;
+		height: 15px;
+	}
+}
+
+@media (max-width: 920px) {
+
+}
+
+
+@media (max-width: 575px) {
+	.header {
+		position: relative;
+	}
+
+	.header__top {
+		-webkit-flex-wrap: wrap;
+		-moz-flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+		-o-flex-wrap: wrap;
+		flex-wrap: wrap;
+	}
+
+	.header__social-list {
+		padding-left: 0;
+		margin: 0;
+	}
+
+	.header__search {
+		position: absolute;
+		top: 68px;
+		right: 10px;
+		width: 15px;
+		height: 15px;
+    }
+
+    .header__nav {
+    	margin-left: 0;
+    }
+}
+
+@media (max-width: 480px) {
+	.header__nav-item {
+		font-size: 12px;
+		line-height: 20px;
+		margin-right: 8px;
+	}
+
+
+}
