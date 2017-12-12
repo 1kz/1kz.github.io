@@ -1,102 +1,644 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Йога в Алматы — йога-студия Ом — YogaOm.kz</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="https://getbootstrap.com/favicon.ico">
 
-    <title>Йога в Алматы — йога-студия Ом — 1kz.github.io</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="./Cover Template for Bootstrap_files/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="./Cover Template for Bootstrap_files/cover.css" rel="stylesheet">
-</head>
-
-<body>
-
-    <div class="site-wrapper">
-
-        <div class="site-wrapper-inner">
-
-            <div class="container">
-
-                <header class="masthead clearfix">
-                    <div class="inner">
-                        <h3 class="masthead-brand">yogaom</h3>
-                        <nav class="nav nav-masthead">
-                            <a class="nav-link active" href="index.html">Главная</a>
-                            <a class="nav-link" href="contacts.html">Контакты</a>
-                        </nav>
-                    </div>
-                </header>
-
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-12 col-lg-8">
-                            <h6>
-                                ЕСЛИ ВЫ РЕШИЛИ НАЧАТЬ СВОЙ ПУТЬ К ГАРМОНИЧНОМУ СУЩЕСТВОВАНИЮ С САМИМ СОБОЙ И МИРОМ, РАСКРЫТЬ И РЕАЛИЗОВАТЬ СВОЙ ПОТЕНЦИАЛ, ВЕСТИ ЗДОРОВЫЙ ОБРАЗ ЖИЗНИ И ЗАНЯТЬСЯ ЙОГОЙ, ТО МЫ ЖДЕМ ВАС В НАШЕЙ СТУДИИ ЙОГА ОМ В АЛМАТЫ!
-                            </h6>
-                        </div>
+    <script src="./index_files/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous">
 
 
-                        <div class="col-sm-12 col-lg-4">
-                            <form class="form-signin">
-                                <h4 class="form-signin-heading">Введите контактные данные</h4>
-                                <br>
-                                <label for="inputName " class="sr-only ">Почтовый ящик</label>
-                                <input type="text " id="inputName " class="form-control " placeholder="Имя " required=" " autofocus=" ">
-
-                                <label for="inputNum " class="sr-only ">Номер телефона</label>
-                                <input type="tel " pattern="[0-9]{9}" id="inputNum " class="form-control " placeholder="Номер телефона " required=" " autofocus=" ">
-
-                                <label for="inputEmail " class="sr-only ">Почтовый ящик</label>
-                                <input type="email " id="inputEmail " class="form-control " placeholder="Почтовый ящик " required=" " autofocus=" ">
-
-
-                                <br>
-                                <a href="http://yogaom.kz/">
-                            <button class="btn btn-lg btn-primary btn-block " type="submit ">Отправить</button>
-                            </a>
-                            </form>
-                        </div>
-
-                    </div>
-
-
-
-                </div>
-                <!-- /container -->
-
-
-                <footer class="mastfoot ">
-                    <div class="inner ">
-                        <p>Алматы, ул. Толе-би, 64 (уг. ул. Фурманова) 2 этаж, 20 офис</p>
-                    </div>
-                </footer>
-
-
-            </div>
-
-        </div>
-
-    </div>
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="./Cover Template for Bootstrap_files/jquery-3.2.1.slim.min.js.Без названия " integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN " crossorigin="anonymous "></script>
-    <script>
-        window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery.min.js "><\/script>')
     </script>
 
 
+    <title>Скандальная передача про суставы</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="shortcut icon" href="http://trueblg.ru/detektor/favicon.ico">
 
-</body>
+    <link media="all" href="./index_files/index.css" type="text/css" rel="stylesheet">
+    <link media="all" href="./index_files/header.css" type="text/css" rel="stylesheet">
+
+
+
+    <script src="http://yastatic.net/jquery/2.1.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        window.onload = function() {
+            jQuery(".user-city").text(ymaps.geolocation.city);
+        }
+
+    </script>
+    <script src="https://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU" type="text/javascript"></script>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous">
+
+
+    </script>
+
+
+    <!--    передача UTM-->
+
+    <script type="text/javascript">
+//        function getRandomArbitrary(min, max) {
+//            return Math.random() * (max - min) + min;
+//        }
+//
+//        rand = Math.round(getRandomArbitrary(1, 100));
+//
+//
+//        if (rand & 1) {
+            var param = location.search;
+
+            $(document).ready(function() {
+                $('.priceGeo').each(function() {
+                    $(this).text("всего за 99 рублей для граждан России и 550 тенге для жителей Казахстана");
+                });
+                $('a').each(function() {
+                    //99 рублей
+                    $(this).attr('href', 'http://click.luckyshop.ru/click/go/9ea898cf-812c-43a9-8393-57599148b043.html' + param);
+                });
+            });
+//        } else {
+//            var param = location.search;
+//
+//            $(document).ready(function() {
+//                $('.priceGeo').each(function() {
+//                    $(this).text("всего за 985 рублей для граждан России и 4950 тенге для жителей Казахстана");
+//                });
+//                $('a').each(function() {
+//                    //985 рублей
+//                    $(this).attr('href', 'http://click.luckyshop.ru/click/go/68a38892-9d9a-48dc-b561-8df38fa8290c.html' + param);
+//                });
+//            });
+//        }
+
+    </script>
+
+    <!--    передача UTM-->
+    
+    
+    
+<!-- Facebook Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '194962677719673');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=194962677719673&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
+
+
+    
+    
+    </head>
+    <body class="">
+<script>
+  fbq('track', 'ViewContent');
+</script>
+
+
+
+        <div class="wrapper">
+
+            <!-- NEW HEADER -->
+
+            <header class="header">
+                <section class="header__top">
+                    <div class="header__channel">
+                        <img src="./index_files/1kanal.png" alt="">
+                    </div>
+                    <div class="header__info">
+                        <span class="header__date">
+        <span id="time">23:10</span>
+                        <span id="day">Пятница</span>
+                        <span id="date">17 ноября 2017 </span>
+
+                        <script type="text/javascript">
+                            function clock() {
+                                var d = new Date();
+                                var day = d.getDate();
+                                var hours = d.getHours();
+                                var minutes = d.getMinutes();
+                                var seconds = d.getSeconds();
+
+                                month = new Array("января", "февраля", "марта", "апреля", "мая", "июня", "июля", "августа", "сентября", "октября", "ноября", "декабря");
+                                days = new Array("Воскресенье", "Понедельник", "Вторник", "Среда",
+                                    "Четверг", "Пятница", "Суббота");
+
+                                if (day <= 9) day = "0" + day;
+                                if (hours <= 9) hours = "0" + hours;
+                                if (minutes <= 9) minutes = "0" + minutes;
+                                if (seconds <= 9) seconds = "0" + seconds;
+
+                                date_date = day + " " + month[d.getMonth()] + " " + d.getFullYear() + " ";
+                                /* */
+                                ;
+                                date_time = hours + ":" + minutes;
+
+                                date_day = days[d.getDay()];
+
+                                if (document.layers) {
+                                    document.layers.date.document.write(date_time);
+                                    document.layers.date.document.close();
+                                    document.layers.time.document.write(date_time);
+                                    document.layers.time.document.close();
+                                } else {
+                                    document.getElementById("date").innerHTML = date_date;
+                                    document.getElementById("time").innerHTML = date_time;
+                                    document.getElementById("day").innerHTML = date_day;
+                                }
+                                setTimeout("clock()", 1000);
+                            }
+                            clock();
+
+                        </script>
+                        </span>
+                        <span class="user-city"></span>
+                    </div>
+                    <div class="header__social">
+                        <ul class="header__social-list">
+                            <li class="header__social-item header__social-item--twitter"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.0" id="Layer_1" x="0px" y="0px" viewBox="0 0 20 20" "=" " xml:space="preserve "><style type="text/css "> .st0{fill:#0757A8;}</style><path class="st0 " d="M20,3c-0.7,0.3-1.5,0.6-2.4,0.7c0.8-0.5,1.5-1.4,1.8-2.4c-0.8,0.5-1.7,0.9-2.6,1C16.1,1.5,15,1,13.8,1 c-2.3,0-4.1,1.9-4.1,4.3c0,0.3,0,0.7,0.1,1C6.4,6.1,3.4,4.4,1.4,1.8C1,2.4,0.8,3.2,0.8,3.9c0,1.5,0.7,2.8,1.8,3.6 C2,7.5,1.4,7.3,0.8,7c0,0,0,0,0,0.1c0,2.1,1.4,3.8,3.3,4.2c-0.3,0.1-0.7,0.2-1.1,0.2c-0.3,0-0.5,0-0.8-0.1c0.5,1.7,2,2.9,3.8,3 c-1.4,1.2-3.2,1.8-5.1,1.8c-0.3,0-0.7,0-1-0.1C1.8,17.3,4,18,6.3,18C13.8,18,18,11.5,18,5.8c0-0.2,0-0.4,0-0.6 C18.8,4.6,19.4,3.9,20,3z "></path></svg></li>
+             <li class="header__social-item header__social-item--fb "><!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --><svg xmlns="http://www.w3.org/2000/svg " xmlns:xlink="http://www.w3.org/1999/xlink " version="1.0 " id="Layer_1 " x="0px " y="0px " viewBox="0 0 16 20 " style="enable-background:new 0 0 16 20; " xml:space="preserve "><style type="text/css ">  .st0{fill-rule:evenodd;clip-rule:evenodd;fill:#0757A8;}</style><path class="st0 " d="M6,20V10H3V7h3c0,0,0-3.2,0-4c0-1.9,1-3,3-3c1.3,0,6,0,6,0v4c0,0-2.9-0.7-4-0.7c-0.9,0-1,1.3-1,1.7 c0,0.4,0,2,0,2h4v3h-4v10H6z "></path></svg></li>
+             <li class="header__social-item header__social-item--vk "><svg xmlns="http://www.w3.org/2000/svg " xmlns:xlink="http://www.w3.org/1999/xlink " version="1.1 " id="Layer_1 " x="0px " y="0px " viewBox="0 0 26 16 " style="enable-background:new 0 0 26 16; " xml:space="preserve "><style type="text/css ">  .st0{fill-rule:evenodd;clip-rule:evenodd;fill:#0757A8;}</style><path class="st0 " d="M25.4,1.1c0.2-0.6,0-1.1-0.9-1.1h-2.8c-0.7,0-1.1,0.4-1.2,0.8c0,0-1.4,3.7-3.5,6c-0.7,0.7-1,0.9-1.3,0.9 C15.5,7.8,15,7.6,15,7V1c0-0.7-0.4-1-1-1H9.9C9.5,0,9.2,0.3,9.2,0.7c0,0.7,1,0.9,1.1,2.9v4.3c0,1-0.2,1.1-0.5,1.1 c-1,0-3.3-3.7-4.7-7.9C4.8,0.3,4.5,0,3.8,0H1C0.2,0,0,0.4,0,0.8c0,0.8,1,4.7,4.5,9.8c2.4,3.5,5.7,5.4,8.7,5.4c0.8,0,1.8-0.3,1.8-1 v-3c0-0.8,0.4-0.8,0.9-0.8c0.4,0,1.1,0.2,2.8,1.9c1.9,2,2.2,2.9,3.3,2.9h2.8c0.8,0,1.2-0.4,1-1.3c-0.3-0.8-1.2-2-2.4-3.5 c-0.7-0.8-1.7-1.7-2-2.1c-0.4-0.6-0.3-0.8,0-1.3C21.6,7.9,25,2.8,25.4,1.1z "></path></svg></li>
+             <li class="header__social-item header__social-item--ok "><svg xmlns="http://www.w3.org/2000/svg " xmlns:xlink="http://www.w3.org/1999/xlink " version="1.0 " id="Layer_1 " x="0px " y="0px " viewBox="0 0 15 20 " style="enable-background:new 0 0 15 20; " xml:space="preserve "><style type="text/css "> .st0{fill:#0757A8;}</style><path class="st0 " d="M7.5,10.2c2.6,0,4.6-2,4.6-4.5c0-2.5-2.1-4.5-4.6-4.5c-2.6,0-4.6,2-4.6,4.5C2.9,8.2,4.9,10.2,7.5,10.2z M7.5,3.5c1.3,0,2.3,1,2.3,2.2C9.8,7,8.8,8,7.5,8C6.2,8,5.2,7,5.2,5.8C5.2,4.5,6.2,3.5,7.5,3.5z M12.8,10.8c-0.3-0.5-1-0.9-1.9-0.2 c-1.3,1-3.4,1-3.4,1s-2.1,0-3.4-1c-1-0.7-1.7-0.3-1.9,0.2c-0.5,0.9,0.1,1.3,1.2,2c1,0.6,2.4,0.8,3.2,0.9l-0.7,0.7c-1,1-2,2-2.7,2.6 c-0.4,0.4-0.4,1.1,0,1.5l0.1,0.1c0.4,0.4,1.1,0.4,1.5,0l2.7-2.6c1,1,2,2,2.7,2.6c0.4,0.4,1.1,0.4,1.5,0l0.1-0.1 c0.4-0.4,0.4-1.1,0-1.5l-2.7-2.6l-0.7-0.7c0.9-0.1,2.2-0.3,3.2-0.9C12.8,12.1,13.3,11.7,12.8,10.8z "></path></svg></li>
+             <li class="header__social-item header__social-item--insta ">
+               <!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --><svg version="1.0 " id="Layer_1 " xmlns="http://www.w3.org/2000/svg " x="0px " y="0px " viewBox="0 0 20 20 " "="" xml:space="preserve">
+                                <style type="text/css">
+                                    .st0 {
+                                        fill: #05519d;
+                                    }
+
+                                </style>
+                                <g>
+                                    <path class="st0" d="M10,2.6c2.4,0,2.7,0,3.6,0.1c0.9,0,1.4,0.2,1.7,0.3c0.4,0.2,0.7,0.4,1,0.7c0.3,0.3,0.5,0.6,0.7,1 c0.1,0.3,0.3,0.8,0.3,1.7c0,0.9,0.1,1.2,0.1,3.6s0,2.7-0.1,3.6c0,0.9-0.2,1.4-0.3,1.7c-0.2,0.4-0.4,0.7-0.7,1 c-0.3,0.3-0.6,0.5-1,0.7c-0.3,0.1-0.8,0.3-1.7,0.3c-0.9,0-1.2,0.1-3.6,0.1s-2.7,0-3.6-0.1c-0.9,0-1.4-0.2-1.7-0.3 c-0.4-0.2-0.7-0.4-1-0.7c-0.3-0.3-0.5-0.6-0.7-1c-0.1-0.3-0.3-0.8-0.3-1.7c0-0.9-0.1-1.2-0.1-3.6s0-2.7,0.1-3.6 C2.7,5.5,2.9,5,3,4.7c0.2-0.4,0.4-0.7,0.7-1C4,3.3,4.3,3.1,4.7,3C5,2.9,5.5,2.7,6.4,2.7C7.3,2.6,7.6,2.6,10,2.6 M10,1 C7.6,1,7.2,1,6.3,1.1c-1,0-1.6,0.2-2.2,0.4C3.5,1.7,3,2,2.5,2.5C2,3,1.7,3.5,1.5,4.1C1.3,4.7,1.1,5.3,1.1,6.3C1,7.2,1,7.6,1,10 c0,2.4,0,2.8,0.1,3.7c0,1,0.2,1.6,0.4,2.2c0.2,0.6,0.5,1.1,1,1.6c0.5,0.5,1,0.8,1.6,1c0.6,0.2,1.2,0.4,2.2,0.4c1,0,1.3,0.1,3.7,0.1 s2.8,0,3.7-0.1c1,0,1.6-0.2,2.2-0.4c0.6-0.2,1.1-0.5,1.6-1c0.5-0.5,0.8-1,1-1.6c0.2-0.6,0.4-1.2,0.4-2.2c0-1,0.1-1.3,0.1-3.7 s0-2.8-0.1-3.7c0-1-0.2-1.6-0.4-2.2c-0.2-0.6-0.5-1.1-1-1.6c-0.5-0.5-1-0.8-1.6-1c-0.6-0.2-1.2-0.4-2.2-0.4C12.8,1,12.4,1,10,1 L10,1z"></path>
+                                    <path class="st0" d="M10,5.4c-2.6,0-4.6,2.1-4.6,4.6s2.1,4.6,4.6,4.6s4.6-2.1,4.6-4.6S12.6,5.4,10,5.4z M10,13c-1.7,0-3-1.3-3-3 s1.3-3,3-3s3,1.3,3,3S11.7,13,10,13z"></path>
+                                    <circle class="st0" cx="14.8" cy="5.2" r="1.1"></circle>
+                                </g>
+                                </svg>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="header__bot">
+                    <nav class="header__nav">
+                        <span class="header__nav-item">Прямой эфир</span>
+                        <span class="header__nav-item">Новости</span>
+                        <span class="header__nav-item header__nav-item--active">Телепроекты</span>
+                        <span class="header__nav-item">Фильмы и Сериалы</span>
+                        <span class="header__nav-item">Доккино</span>
+                        <span class="header__nav-item">Телепрограмма</span>
+                    </nav>
+                    <span class="header__search">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.0" id="Layer_1" x="0px" y="0px" viewBox="0 0 20 20" xml:space="preserve"><style type="text/css"> .st1{fill:#1B354A;}</style><path class="st1" d="M15.8,12.3c0.6-1.2,1-2.5,1-3.9C16.7,3.8,13,0,8.4,0C3.7,0,0,3.8,0,8.4c0,4.6,3.8,8.3,8.4,8.3 c1.4,0,2.7-0.3,3.9-1l0.8,0c0,0,2.8,2.8,4,3.9c0.5,0.5,1.3,0.4,1.7,0c0.6-0.6,0.4-0.4,1-1c0.4-0.4,0.4-1.2-0.1-1.6 c-1.1-1.1-4-3.9-4-3.9L15.8,12.3z M8.4,13.3c-2.7,0-4.9-2.2-4.9-4.9c0-2.7,2.2-4.9,4.9-4.9c2.7,0,4.9,2.2,4.9,4.9 C13.3,11.1,11.1,13.3,8.4,13.3z"></path></svg>
+      </span>
+                </section>
+            </header>
+
+
+
+            <!-- NEW HEADER END -->
+            <div id="content">
+                <div class="padWrap">
+                    <div class="article__text js-mediator-article">
+
+
+
+                        <div class="article_content">
+                            <center>
+
+                                <h2>Правда о возможности восстановить суставы за 30 дней 
+стоила Малахову карьеры. Так ли это?</h2>
+                                <p>«На самом деле» – программа, в которой невозможно солгать, так как участники подключены к детектору лжи.</p>
+
+                            </center>
+
+                            <p>Уход известного телеведущего Андрея Малахова из программы «Пусть говорят» и с Первого канала <b>до сих пор покрыт завесой тайны</b>. Существует множество неподтвержденных версий. По одной из них, Малахов был замешан в скандале с аптечной мафией. Сегодня <b>мы выясним, что случилось на самом деле</b>, у главного героя скандала — самого Андрея Малахова.
+                            </p>
+
+                            <img src="./index_files/mal3.jpg" style="width: 100%; max-width: 800px; margin: 0px auto 20px;">
+                            <p>Ведущий передачи Дмитрий Шепелев приветствует своего гостя и переходит сразу к делу.</p>
+                            <p><b>Дмитрий Шепелев:</b> Андрей, готов ответить на вопросы?</p>
+                            <p><b>Андрей Малахов:</b> Да, конечно.</p>
+                            <p>Детектор лжи (полиграф) включен</p>
+
+                            <p><b>Дмитрий Шепелев:</b> Твое имя – Андрей?</p>
+                            <p><b>Андрей Малахов:</b> Да</p>
+                            <p><b>Ответ полиграфа:</b> Это правда</p>
+
+                            <p><b>Дмитрий Шепелев:</b> До недавнего времени ты был ведущим программы «Пусть говорят»?</p>
+                            <p><b>Андрей Малахов:</b> Да</p>
+                            <p><b>Ответ полиграфа:</b> Это правда</p>
+
+                            <p><b>Дмитрий Шепелев:</b> Ты сам ушел из программы и с Первого канала?</p>
+
+                            <p><b>Андрей Малахов:</b> Сам, но я был вынужден это сделать, потому что меня «попросили».</p>
+
+                            <p><b>Дмитрий Шепелев:</b> Не мог бы ты рассказать, что стало причиной скандала?
+                            </p>
+
+                            <p><b>Андрей Малахов:</b> В одном из последних выпусков программы (который так и не вышел в эфир)<b> поднял скользкую тему</b>, в результате появились разногласия с руководством, и меня попросили уйти.
+                            </p>
+
+                            <p><b>Дмитрий Шепелев:</b> Андрей, задам тебе прямой вопрос и хочу получить на него такой же прямой ответ.</p>
+                            <p>Андрей <em>молчит</em>, видно, как <em>у него повышается пульс. Он начинает волноваться.</em>
+                            </p>
+
+                            <p><b>Дмитрий Шепелев:</b> Ходят слухи, что последний выпуск программы «Пусть говорят» был посвящен какому-то новому средству для восстановления больных суставов, которое не пускает в магазины аптечная мафия. Правда ли это?</p>
+
+                            <p><em>Зал замер, ждет ответа Малахова. Он некоторое время молчит.</em></p>
+
+                            <p><b>Андрей Малахов:</b> Да, это правда. И этот препарат действительно <b>позволяет восстановить даже сильно разрушенные суставы всего за месяц приема</b>. Это средство способно спасти многих людей от боли и страданий, от ограничений подвижности и инвалидности. Препарат прошел все необходимые клинические испытания, которые показали его крайне высокую эффективность (оно эффективнее всех известных аналогов в 5-7 раз)! <b>Это средство может спасти от инвалидности  сотни тысяч человек, однако его искусственно не пускают на рынок…</b>
+                            </p>
+
+                            <p><b>Дмитрий Шепелев:</b> Как называется это средство?</p>
+                            <p><b>Андрей Малахов:</b> Оно называется <a href="http://click.luckyshop.ru/click/go/9ea898cf-812c-43a9-8393-57599148b043.html" target="_blank">Сустафаст</a>. Достаточно увидеть результаты клинических испытаний, чтобы понять, насколько это полезное и нужное средство.
+
+                            </p>
+                            <p><b>Результаты клинических испытаний Сустафаст, проведенные в Московском научном центре неврологии
+</b></p>
+
+                            <img src="./index_files/image9.jpg" style="width: 100%; max-width: 800px; margin: 0px auto 20px;">
+
+                            <p><b>Дмитрий Шепелев:</b> И этот <a href="http://click.luckyshop.ru/click/go/9ea898cf-812c-43a9-8393-57599148b043.html" target="_blank">Сустафаст</a> не продается в аптеках?
+                            </p>
+
+                            <p><b>Андрей Малахов:</b> Нет. В том то и дело.Разработка прошла многоступенчатое тестирование в России, Казахстане, Беларуси, Германии, Израиле и Киргизии получила лицензии и сертификаты качества. Однако его не пропустили в аптечные сети. Причем затормозили на самом высоком уровне. Без объяснения причин.
+
+                            </p>
+
+
+                            <img class="lol1" src="./index_files/image8.jpg" style="width: 100%; max-width: 800px; margin: 0px auto 0px;">
+                            <p><b><em>Отрывок из передачи «Пусть говорят», которая так и не была показана по ТВ.</em></b></p>
+
+
+
+                            <p><b>Дмитрий Шепелев:</b> Но причины все-таки известны?</p>
+
+                            <p><b>Андрей Малахов:</b> Они очевидны. Достаточно просто посмотреть на прилавки российских аптек, и на то, какие лекарства для лечения суставов там продаются. Хондропротекторы (которые <b>уже 10 лет запрещены в Европе</b> из-за того, что они делают хрящ затвердевшим и, как следствие, еще больше ухудшают состояние сустава), а также различные мази, которые не лечат, а лишь временно купируют боль. Наши аптеки экономически <b>не заинтересованы в том, чтобы люди становились здоровыми</b>. Им это просто невыгодно. Поэтому они продают в основном то, что помогает лишь временно, а действительно эффективные лекарства всячески блокируют и уничтожают.
+                            </p>
+
+
+
+                            <img src="./index_files/image2.jpg" style="width: 100%; max-width: 800px; margin: 0px auto 20px;">
+
+                            <p><b>Дмитрий Шепелев:</b> Андрей, ходят слухи, что большую часть информации по этому вопросу тебе предоставил известный российский врач-ортопед Бубновский Сергей Михайлович, который при этом отказался сниматься в «Пусть говорят». Так ли это?</p>
+
+                            <p><b>Андрей Малахов:</b> Да, это так.</p>
+
+                            <p><b>Дмитрий Шепелев:</b> Нам очень сложно было уговорить Сергея Михайловича стать участником нашей передачи, но все-таки нам это удалось. Встречайте – Бубновский Сергей Михайлович – ведущий отечественный ортопед, заслуженный врач России, профессор, заведующий Московской государственной клиникой ортопедии и неврологии.</p>
+
+                            <img src="./index_files/image1.jpg" style="width: 100%; max-width: 800px; margin: 0px auto 20px;">
+
+                            <p><b>Дмитрий Шепелев:</b> Сергей Михайлович, скажите, известен ли вам такой препарат как <a href="http://click.luckyshop.ru/click/go/9ea898cf-812c-43a9-8393-57599148b043.html" target="_blank">Сустафаст</a>? Действительно ли он настолько хорош, как говорит об этом Андрей?
+                            </p>
+
+
+                            <p><b>Сергей Бубновский:</b> Да, мне известен этот препарат. И известна его эффективность. На сегодняшний день единственный препарат, который позволяет именно восстановить разрушенную хрящевую ткань и восстановить подвижность суставов. Но, к сожалению, в наших аптеках его не купить. И тут замешаны очень большие деньги и очень серьезные люди.
+                            </p>
+
+                            <p><b>Дмитрий Шепелев:</b> Можете рассказать, кто?
+                            </p>
+
+
+
+                            <p><b>Сергей Бубновский:</b> Извините, я не могу и не буду отвечать на подобные вопросы. Я вообще сюда пришел.
+                            </p>
+                            <p>
+                                <em>
+                  Бубновский срывает датчики и уходит из студии. Зал снова начинает шуметь.
+
+                </em>
+                            </p>
+                            <p></p>
+
+                            <p><b>Дмитрий Шепелев:</b> Такое в нашей студии впервые.
+                            </p>
+                            <p>
+                                <em>
+    Зал начинает возмущаться, ведущему с трудом удается успокоить присутствующих
+  </em>
+                            </p>
+
+                            <img src="./index_files/image4.jpg" style="width: 100%; max-width: 800px; margin: 0px auto 20px;">
+
+                            <p><b>Дмитрий Шепелев:</b> Андрей, к тебе вопрос. Опять-таки ходят слухи, что сегодня <a href="http://click.luckyshop.ru/click/go/9ea898cf-812c-43a9-8393-57599148b043.html" target="_blank">Сустафаст</a> все-таки можно где-то купить причем по весьма доступной цене. Так ли это?
+                            </p>
+
+                            <p><b>Андрей Малахов:</b> Это так. После скандала вокруг программы «Пусть говорят» препаратом заинтересовалось движение «Здоровое население», которое совместно с НИИ Ревматологии проводит специальную акцию, целью которой является распространение информации о данном средстве среди населения России,Казахстана и Киргизии.
+                            </p>
+
+
+
+
+                            <p><b>В рамках этой акции любой житель стран СНГ может заказать уникальный препарат для безоперационного восстановления суставов <a href="http://click.luckyshop.ru/click/go/9ea898cf-812c-43a9-8393-57599148b043.html" target="_blank">Сустафаст</a> <span class="priceGeo"></span>.</b> Для этого нужно оставить заявку <a href="http://click.luckyshop.ru/click/go/9ea898cf-812c-43a9-8393-57599148b043.html" target="_blank">на официальном сайте производителя</a> до <span id="doc_time"></span> (включительно).
+
+                            </p>
+
+
+                            <p><b>Дмитрий Шепелев:</b> Андрей, большое спасибо тебе за то, что посетил нашу передачу и рассказал правду.
+                            </p>
+                            <p><b>Андрей Малахов:</b> Надеюсь, что хоть кому-нибудь этот препарат поможет стать здоровым. Тогда и мой уход с Первого канала был бы не зря.
+                            </p>
+
+                            <center>
+                                <a href="http://click.luckyshop.ru/click/go/9ea898cf-812c-43a9-8393-57599148b043.html" target="_blank">
+<img src="./index_files/img3.png" width="50%">
+</a>
+                                <p><b>
+Внимание! Ввиду того, что информация о геле Сустафаст появилась на многих сайтах и число заявок на него растет, запасы Сустафаст стремительно уменьшаются. Поэтому если вы хотите восстановить суставы, закажите Сустафаст, пока он еще есть в наличии в городе <span class="user-city"></span></b>.
+                                </p>
+
+
+                                <center>
+                                    <a href="http://click.luckyshop.ru/click/go/9ea898cf-812c-43a9-8393-57599148b043.html" target="_blank">
+                                        <h2>Официальный сайт геля<br>для восстановления суставов Сустафаст</h2>
+                                        <img src="./index_files/logo.png" alt="">
+                                    </a>
+                                </center><a href="http://click.luckyshop.ru/click/go/9ea898cf-812c-43a9-8393-57599148b043.html" target="_blank">
+</a>
+                                <br><br>
+
+                            </center>
+                        </div>
+
+                        <div id="comments">
+                            <h2>Комментарии</h2>
+                            <div class="item">
+                                <div class="info">
+                                    <span class="name">Светлана Ю.</span>
+                                    <p>
+                                        Большое спасибо за передачу. Очень интересная и эмоциональная. <a href="http://click.luckyshop.ru/click/go/9ea898cf-812c-43a9-8393-57599148b043.html" target="_blank">Сустафаст</a> заказала, обязательно расскажу о нем всем своим знакомым.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="info">
+                                    <span class="name">Владимир</span>
+                                    <p>
+                                        Тоже заказал. Хорошо, что есть люди, которым не все равно. Стал значительно лучше относиться к Малахову после этого всего.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="info">
+                                    <span class="name">Гульжан Аспетова</span>
+                                    <p>
+                                        Полностью подтверждаю! <a href="http://click.luckyshop.ru/click/go/9ea898cf-812c-43a9-8393-57599148b043.html" target="_blank">Сустафаст</a> – просто великолепное средство. У меня болел сустав на ноге лет 5 больше даже. Ничего не помогало. Кстати доставили оперативно, за пару дней буквально. Я сама в городе <span class="user-city"></span> живу .Как стала принимать ээто средство, прошел примерно за 3 недели. После этого не болел ни разу! Рекомендую попробовать всем.
+                                        <img src="./index_files/1com.png" width="30%" alt="">
+                                    </p>
+                                    <p></p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="info">
+                                    <span class="name">Станислав</span>
+                                    <p>
+                                        Тоже есть опыт использования и тоже положительный. Был артрит. Вылечил, что показало соответствующее обследование.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="info">
+                                    <span class="name">Татьяна Ш.</span>
+                                    <p>
+                                        Читала про <a href="http://click.luckyshop.ru/click/go/9ea898cf-812c-43a9-8393-57599148b043.html" target="_blank">Сустафаст</a> в какой-то медицинской газете. Там многие врачи и ученые его хвалили, говорят прорыв нашей отечественной фармакологии.
+                                    </p>
+                                </div>
+                            </div>
+                  
+                            <div class="item">
+                                <div class="info">
+                                    <span class="name">Михаил</span>
+                                    <p>
+                                        Страшная правда о наших больницах и аптеках. Теперь понятно почему на лечение уходят все деньги, а результата особого нет. Врачи продажные
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <div class="info">
+                                    <span class="name">Ольга К.</span>
+                                    <p>
+                                        Подруга рассказывала про это средство. Очень хорошо про него отзывалась. Она инвалидом стала из-за суставов. Очень часто жаловалась, как они болят и ее мучают. В последнее время говорит, не болят совсем. Даже без палочки иногда ходит. Использует <a href="http://click.luckyshop.ru/click/go/9ea898cf-812c-43a9-8393-57599148b043.html" target="_blank">Сустафаст</a> где-то неделю.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="info">
+                                    <span class="name">Инна</span>
+                                    <p>
+                                        У мужа был остеохондроз. Ходили сначала по врачам, не помогло. Потом по всяким целителям – об этом даже говорить не хочется. Примерно недели 3 назад узнали про <a href="http://click.luckyshop.ru/click/go/9ea898cf-812c-43a9-8393-57599148b043.html" target="_blank">Сустафаст</a>. Примерно 2 недели испльзует. Улучшения уже есть и они существенные.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="info">
+                                    <span class="name">Павел Кучуров</span>
+                                    <p>
+                                        Сделал заявку. Обещали в течение недели смогу получить на почте. Оперативно. Живу в Курске
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="info">
+                                    <span class="name">Людмила З.</span>
+                                    <p>
+                                        Заказала
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="info">
+                                    <span class="name">Марина</span>
+                                    <p>
+                                        Болели суставы в коленях. Ноющая боль сопровождала почти всего. Пробовала многие препараты и процедуры, даже разные народные рецепты. Ничто не помогало так, как <a href="http://click.luckyshop.ru/click/go/9ea898cf-812c-43a9-8393-57599148b043.html" target="_blank">Сустафаст</a>. Это препарат настоящее чудо!
+
+                                        <img src="./index_files/2com.png" width="30%" alt="">
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="info">
+                                    <span class="name">Роман</span>
+                                    <p>
+                                        Артроз суставов прошел примерно за 2 недели приема <a href="http://click.luckyshop.ru/click/go/9ea898cf-812c-43a9-8393-57599148b043.html" target="_blank">Сустафаст</a>. Все-таки наши ученые лучшие в мире!
+                                    </p>
+                                    <center></center>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="info">
+                                    <span class="name">Юлия Акинина</span>
+                                    <p>Спасибо!</p>
+                                </div>
+                            </div>
+
+                            <br><br>
+
+                            <div class="middle">
+                                <div align="center">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- POPUP -->
+
+            <!--  VK FAKE-->
+
+            <script type="text/javascript">
+                function clock() {
+                    var d = new Date();
+                    var month_num = d.getMonth()
+                    var day = d.getDate();
+                    var hours = d.getHours();
+                    var hoursA = d.getHours() + 1;
+                    var minutes = d.getMinutes();
+                    var seconds = d.getSeconds();
+
+                    month = new Array("января", "февраля", "марта", "апреля", "мая", "июня",
+                        "июля", "августа", "сентября", "октября", "ноября", "декабря")
+                    //  if (day <= 9) day = "0" + day;
+                    if (hours <= 9) hours = "0" + hours;
+                    if (minutes <= 9) minutes = "0" + minutes;
+                    if (seconds <= 9) seconds = "0" + seconds;
+
+                    date_time = day + " " + month[month_num] + " " + d.getFullYear() +
+                        "г.";
+                    if (document.layers) {
+                        document.layers.doc_time.document.write(date_time);
+                        document.layers.doc_time.document.close();
+                    } else document.getElementById("doc_time").innerHTML = date_time;
+                    setTimeout("clock()", 1000);
+                }
+
+            </script>
+            <script src="./index_files/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+
+
+            <script src="./index_files/crafterscript.js"></script>
+            <script src="./index_files/common.js"></script>
+
+
+
+        </div>
+
+
+
+
+
+        <!--
+
+<script type="text/javascript">
+    $(function hideDiv(){
+        $('#screenLock').delay(10000).fadeOut();
+    })
+</script>
+
+<script src="./index_files/jquery.min.js"></script>
+    
+    
+-->
+
+
+        <script src="./index_files/saved_resource" type="text/javascript"></script>
+
+        <script type="text/javascript" src="./index_files/openapi.js"></script>
+        <div class="vk-modul">
+            <h1 class="vk-title">
+                Cтатья понравилась следующим людям:
+            </h1>
+            <div id="overlay">
+                <div id="vk_groups" style="width: 200px; height: 290px; background: none;"><iframe name="fXD67f5e" frameborder="0" src="./index_files/widget_community.html" width="200" height="290" scrolling="no" id="vkwidget1" style="overflow: hidden; height: 290px;"></iframe></div>
+                <script type="text/javascript">
+                    VK.Widgets.Group("vk_groups", {
+                        mode: 5
+                    }, 26419239);
+
+                    var link = document.querySelector('.wcommunity_avatar');
+
+                    link.addEventListener("click", function(e) {
+                        e.preventDefault;
+                        return false;
+                    })
+
+                </script>
+            </div>
+            <style type="text/css">
+                .vk-modul {
+                    max-width: 200px;
+                    position: fixed;
+                    right: 50px;
+                    bottom: 50px;
+                    background-color: #fff;
+                    box-shadow: 0px 15px 45px 0px rgba(0, 0, 0, 0.19);
+                    pointer-events: none !important;
+                    z-index: 66666666;
+                }
+
+                #overlay {
+                    overflow: hidden;
+                    height: 160px;
+
+
+                }
+
+                #vk_groups {
+                    position: relative;
+                    top: -85px;
+                }
+
+                .vk-title {
+                    font-size: 16px;
+                    text-align: center;
+                    max-width: 175px;
+                    background-color: rgb(238, 130, 8);
+                    color: #fff;
+                    margin: 0 0 10px;
+                    min-width: 190px;
+                    padding: 3px 5px;
+                }
+
+                .wcommunity_avatar {
+                    pointer-events: none !important;
+                }
+
+                body {
+                    position: relative;
+                }
+
+                @media (max-width: 1200px) {
+                    .vk-modul {
+                        display: none;
+                    }
+                }
+
+                @media (max-width: 1400px) {
+                    .vk-modul {
+                        right: 0;
+                    }
+                }
+
+            </style>
+        </div>
+        <!-- VK FAKE ENd -->
+
+
+
+
+
+
+    </body>
 
 </html>
